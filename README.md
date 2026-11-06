@@ -68,7 +68,28 @@ If the repository contains `pyproject.toml` and `uv.lock`:
 uv sync
 ```
 
-### 7. Run the application
+### 7. Environment Variables
+
+Create your environment file by copying the example:
+
+**Linux / macOS:**
+
+```bash
+cp .env.example .env
+```
+
+**Windows:**
+
+```powershell
+copy .env.example .env
+```
+
+Open `.env` and replace the placeholder values with your actual configuration and API keys.
+
+**Important:** Never commit your `.env` file or expose your API keys publicly.
+
+
+### 8. Run the application
 
 ```bash
 uv run python main.py
