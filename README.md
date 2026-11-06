@@ -1,20 +1,110 @@
-# mini-rag
-    This is minimal implementation of the RAG model for 
-    question answering 
+# Mini RAG
 
+This is a minimal implementation of a Retrieval-Augmented Generation (RAG) model for question answering.
 
 ## Requirements
-    - Python 3.11 or later 
 
-#### Install python using miniconda 
+- Python 3.11 or later
+- [uv](https://docs.astral.sh/uv/)
 
-1) Download and install Miniconda from [here](https://www.anaconda.com/download)
-2) Open a terminal and run the following command to install Python 3.11:
+## Installation
+
+### 1. Install uv
+
+If you haven't installed uv yet, run:
+
 ```bash
-    conda create -n mini-rag-app python = 3.12
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-3) activate the environment 
+Restart your terminal or reload your shell configuration.
+
+Verify the installation:
+
 ```bash
-    conda activate mini-rag-app
+uv --version
+```
+
+### 2. Clone the repository
+
+```bash
+git clone <repository-url>
+cd MINI-RAG-APP
+```
+
+### 3. Install Python
+
+Install Python 3.12:
+
+```bash
+uv python install 3.12
+```
+
+### 4. Create a virtual environment
+
+```bash
+uv venv --python 3.12
+```
+
+### 5. Activate the environment
+
+**Linux / macOS:**
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 6. Install dependencies
+
+If the repository contains `pyproject.toml` and `uv.lock`:
+
+```bash
+uv sync
+```
+
+### 7. Run the application
+
+```bash
+uv run python main.py
+```
+
+## Managing Dependencies
+
+Add a new package:
+
+```bash
+uv add package-name
+```
+
+Remove a package:
+
+```bash
+uv remove package-name
+```
+
+Update dependencies:
+
+```bash
+uv lock --upgrade
+uv sync
+```
+
+## Project Structure
+
+```text
+MINI-RAG-APP/
+│
+├── .venv/
+├── src/
+├── pyproject.toml
+├── uv.lock
+├── .python-version
+├── README.md
+└── .gitignore
 ```
