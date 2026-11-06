@@ -8,10 +8,13 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi[standard]>=0.162.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
     "pandas>=3.1.1",
+    "python-multipart>=0.0.33",
     "scikit-learn>=1.9.1",
+    "uvicorn[standard]>=0.54.0",
 ]
 
 [project.scripts]
