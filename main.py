@@ -1,14 +1,11 @@
 from fastapi import FastAPI
+from dotenv import load_dotenv
+load_dotenv(".env")
+from routes import base 
 
 app = FastAPI()
 
-@app.get("/welcome")
-def message():
-    return {"message ":"Hello World"}
-@app.get("/")
-def read_root():
-    return {"hello":"world"}
+app.include_router(base.router)
 
-@app.get("/items/{item_id}")
-def read_item(item_id :int , q:str | None = None ):
-    return {"item_id":item_id,"q" : q}
+
+
