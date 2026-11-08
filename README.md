@@ -116,6 +116,13 @@ uv lock --upgrade
 uv sync
 ```
 
+## run fast api server
+
+```bash
+uv run uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+
+
 ## Project Structure
 
 ```text
